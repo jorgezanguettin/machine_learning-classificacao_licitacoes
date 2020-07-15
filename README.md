@@ -1,2 +1,4 @@
-# machine-learning-licitacoes-agronegocio
+# Utilização de algoritmos de Machine Learning para classificação de licitações do agronegócio
+
+## Objetivo
 O processo licitatório no Brasil tem diversas modalidades, dentre elas, o pregão eletrônico, onde existe uma grande variedade de plataformas cada uma com sua singularidade. Neste trabalho foi apresentado a utilização dos algoritmos de Regressão Logística (RL) e Rede Neural Artificial (RN) para a classificação das licitações presentes na plataforma BBMNET entre pertencentes ao agronegócio e não pertencentes ao agronegócio. Dando suporte aos algoritmos classificatórios, foi criado um dicionário de palavras e sua existência foi verificada nas licitações coletados por meio de um Web Crawler. Os resultados mostram que os algoritmos de RL e RN obtiveram uma acurácia de 84% e 72% respectivamente. O algoritmo de RN obteve maior dificuldade em classificar as licitações corretamente. O modelo escolhido foi capaz de classificar as licitações entre pertencentes ou não ao agronegócio.
