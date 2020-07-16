@@ -1,0 +1,38 @@
+<ion-content class="bg-class" fullscreen>
+
+  <ion-card class="title_content">
+    Configurações
+  </ion-card>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-card class="text_content" (click)="presentModal()" >
+          <ion-icon name="people-outline"></ion-icon><br>
+          <span>Contato</span>
+        </ion-card>
+      </ion-col>
+      <ion-col>
+        <ion-card class="text_content" (click)="enviar_sugestoes()" >
+          <ion-icon name="chatbubble-ellipses-outline"></ion-icon><br>
+          <span>Sugestões</span>
+        </ion-card>    
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-card class="text_content" (click)="alterar_senha()" >
+          <ion-icon name="hammer-outline"></ion-icon><br>
+          <span>Alterar senha</span>
+        </ion-card>
+      </ion-col>
+      <ion-col>
+        <ion-card class="text_content" (click)="excluir_contato()" >
+          <ion-icon class="red" name="trash-outline"></ion-icon><br>
+          <span>Excluir Conta</span>
+        </ion-card>      
+      </ion-col>
+    </ion-row>
+    </ion-grid>
+
+  </ion-content>

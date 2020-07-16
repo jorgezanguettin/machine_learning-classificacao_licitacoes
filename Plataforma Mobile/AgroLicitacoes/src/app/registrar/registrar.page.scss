@@ -1,0 +1,41 @@
+.bg-class{
+    --background: url("../../assets/background3.jpg") no-repeat fixed center;
+}
+
+.box_center_icon {
+    font-size: 22px;
+    margin-top: 5%;
+    text-align: center;
+}
+
+.box_center_logo {
+    img {
+        width: 40%;
+    }
+    .titleLogo {
+        font-size: 22px;
+        font-weight: bold;
+    }
+
+    .subTitleLogo {
+        font-size: 12px;
+    }
+
+    margin-top: 5%;
+    text-align: center;
+}
+
+.box_center {
+    margin-top: 10%;
+    text-align: center;
+}
+
+.btn-down {
+    margin-top: 10%;
+    color: black;
+    --background: rgb(77, 255, 77);
+  }
+
+ion-input {
+    text-align: center;
+}

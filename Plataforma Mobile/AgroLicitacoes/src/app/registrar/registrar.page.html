@@ -1,0 +1,45 @@
+<ion-content class="bg-class" fullscreen>
+
+  <div (click)="fecharModal()" class="box_center_icon">
+    <ion-icon name="chevron-down-outline"></ion-icon>
+  </div>
+
+  <div class="box_center_logo">
+    <img src="../../assets/logo2.png"><br>
+    <!-- <span class="titleLogo">AGRO LICITAÇÕES</span><br><br><br> -->
+    <span class="titleLogo">Registrar-se</span>
+  </div>
+
+  <div class="box_center">
+
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-card>
+            <ion-input [(ngModel)]="nomeCompleto" placeholder="Como podemos te chamar?"></ion-input>
+          </ion-card>
+          <br>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-card>
+            <ion-input [(ngModel)]="email" placeholder="Qual é o seu e-mail?"></ion-input>
+          </ion-card>
+          <br>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-card>
+            <ion-input [(ngModel)]="senha" placeholder="Crie sua senha" type="password"></ion-input>
+          </ion-card>
+        </ion-col>
+        <br>
+      </ion-row>
+    </ion-grid>
+
+    <ion-button class="btn-down text-center" (click)="registrar()">REGISTRAR-SE</ion-button>
+  </div>
+
+</ion-content>

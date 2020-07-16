@@ -1,0 +1,35 @@
+<ion-content class="bg-class" fullscreen>
+
+  <div class="box_center_logo">
+    <img src="../../assets/logo2.png"><br>
+    <!-- <span class="titleLogo">AGRO LICITAÇÕES</span><br> -->
+    <!-- <span class="subTitleLogo">CLASSIFICADOR DE LICITAÇÕES PARA O AGRONEGÓCIO!</span> -->
+  </div>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-card class="input_box">
+          <ion-input [(ngModel)]="email" placeholder="Seu E-mail"></ion-input>
+        </ion-card>
+        <br><br>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-card class="input_box">
+          <ion-input [(ngModel)]="senha" type="password" placeholder="Sua Senha"></ion-input>
+        </ion-card>
+        <br><br>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <div class="box_center">
+    <ion-button (click)="loginInPlatform()" class="btn-down text-center">ENTRAR</ion-button><br>
+
+    <span class="spanOther">OU</span><br>
+
+    <ion-button class="btn-down text-center" (click)="presentModal()">REGISTRAR-SE</ion-button>
+  </div>
+</ion-content>

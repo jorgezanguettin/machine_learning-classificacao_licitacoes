@@ -1,0 +1,66 @@
+<ion-content *ngIf=licitacao class="bg-class" fullscreen>
+
+  <div (click)="fecharModal()" class="box_center_icon">
+    <ion-icon name="chevron-down-outline"></ion-icon>
+  </div>
+
+  <ion-card class="ion-text-center">
+    <span><strong>PREGÃO ELETRONICO N° {{licitacao.NumeroEdital}}<br>{{licitacao.UnidadeCompradora}}</strong></span>
+  </ion-card>
+
+  <ion-card>
+
+    <ion-card-content>
+      <section class="ion-text-center">
+        <span>{{licitacao.Objeto}}</span>
+      </section><br>
+
+      <section class="title_content">
+        <span>SELECIONE UM LOTE ABAIXO</span>
+
+        <ion-select #ionLotes ng-model="mySelect" (ionChange)="showSelectValue(ionLotes.value)"
+        placeholder="CLIQUE AQUI :D">
+          <ion-select-option *ngFor="let lotes of licitacao.LotesLicitacao, let i = index" value={{i}}>
+            Lote {{lotes.NumeroLote + ' > ' + lotes.NomeLote}}
+          </ion-select-option>
+        </ion-select>
+      </section>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card *ngIf=loteAtual>
+
+    <ion-card-content>
+      <div class="ion-text-center topLote">
+        <span class="title_content">INFORMAÇÕES DO LOTE SELECIONADO</span>
+      </div><hr>
+
+      <span><strong>Descrição : </strong>{{loteAtual.NomeLote}}</span><br>
+
+      <span><strong>Valor Referencia : </strong>{{loteAtual.ValorReferencia}}</span><br>
+
+      <span><strong>Situação : </strong>{{loteAtual.SituacaoLote}}</span><br>
+
+      <span><strong>Participação : </strong>{{loteAtual.ParticipacaoLote}}</span><br><br>
+
+      <div class="ion-text-center">
+        <hr>
+        <span class="title_content">ITENS DO LOTE SELECIONADO</span>
+        <hr><br>
+      </div>
+
+      <div *ngFor="let itens of loteAtual.ItensLotes">
+        <span>
+          <p><strong>Item : </strong>{{itens.NomeItem}}</p>
+          <p><strong>Quantidade : </strong>{{itens.Quantidade}}</p>
+          <p><strong>Valor Referencia : </strong>{{itens.ValorReferencia}}</p>
+        </span>
+        <hr>
+      </div>
+
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+
+<ion-button *ngIf=licitacao class="btn-down text-center" href={{licitacao.UrlLicitacao}} target="_blank">ACESSAR LICITAÇÃO
+</ion-button>

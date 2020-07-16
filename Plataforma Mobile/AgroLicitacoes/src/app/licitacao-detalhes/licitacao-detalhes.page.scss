@@ -1,0 +1,32 @@
+ion-card-title {
+    font-size: 18px;
+}
+
+.title_content {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.bg-class{
+    --background: url("../../assets/background3.jpg") no-repeat fixed center;
+}
+
+.btn-down {
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-bottom: 5px;
+    color: black;
+    --background: rgb(77, 255, 77);
+  }
+
+ion-icon {
+    padding-right: 5px;
+    font-size: 20px;
+  }
+
+.box_center_icon {
+    font-size: 22px;
+    margin-top: 5%;
+    text-align: center;
+}

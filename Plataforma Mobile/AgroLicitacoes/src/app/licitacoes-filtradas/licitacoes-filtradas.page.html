@@ -1,0 +1,32 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+<ion-header>
+  <ion-searchbar placeholder="Digite o objeto desejado" (change)="searchInList($event.target.value)" ></ion-searchbar>
+</ion-header>
+
+<ion-content class="bg-class">
+
+  <ion-list class="card-theme">
+    <ion-card *ngFor="let licitacao of all_licitacoes" (click)="presentModal(licitacao._id)">
+      <!-- <div class="center">
+        <ion-badge color="success">{{licitacao.PorcentagemCategoria}}% AGRO</ion-badge>
+      </div> -->
+      <ion-card-header>
+        <ion-card-title>{{licitacao.NumeroEdital}}</ion-card-title>
+      </ion-card-header>
+      
+      <ion-card-content>
+        <span>{{licitacao.UnidadeCompradora}}</span><br><br>
+  
+        <span *ngIf="validarCampo(licitacao.DataInicioProposta);else other_content">
+          Data Inicio : {{licitacao.DataInicioProposta}}
+        </span><br><br>
+
+        <ng-template #other_content>Data Inicio : Não Informado</ng-template>
+  
+        <p>Objeto : {{licitacao.Objeto}}</p><br>
+      </ion-card-content>
+    </ion-card>
+  </ion-list>
+
+</ion-content>

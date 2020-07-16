@@ -1,0 +1,40 @@
+<ion-content class="bg-class" fullscreen>
+
+  <ion-card class="title_content">
+    Bem vindo ao Agro Licitações!
+  </ion-card>
+
+  <div class="center" >
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-card class="text_content">
+            TOTAL DE<br>LICITAÇÕES<br><span class="numero_licitacoes">{{totalLicitacoes}}</span>
+          </ion-card>
+        </ion-col>
+        <ion-col>
+          <ion-card class="text_content">
+            LICITAÇÕES<br>AGRONEGÓCIO<br><span class="numero_licitacoes_agro">{{totalLicitacoesAgro}}</span>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-card class="text_content">
+            TOTAL DE<br>USUARIOS<br><span class="numero_licitacoes_agro">{{totalUsuarios}}</span>
+          </ion-card>
+        </ion-col>
+        <ion-col>
+          <ion-card class="text_content">
+            PLATAFORMAS CRAWLEADAS<br><span class="numero_plataformas">1</span>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+
+</ion-content>
+
+<ion-card (click)="deslogar()" class="text_content btn-down">
+  SAIR
+</ion-card>
